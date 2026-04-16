@@ -1,0 +1,43 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.envrc
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE/editor files
+.vscode/
+*.swp
+*.swo
+
+# Library caches
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore package locks if using pipenv/poetry
+Pipfile.lock
+poetry.lock
+
+# macOS
+.DS_Store
+
+# Note: dependencies like numpy, matplotlib, scipy, pandas are installed via requirements or env,
+# so their source files should not be committed from your local environment.
