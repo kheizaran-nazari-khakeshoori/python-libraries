@@ -10,3 +10,10 @@ This project is designed for real-world weather analysis, not simple tutorial da
 - Uses `numpy` for vectorized anomaly detection and rolling statistics.
 - Uses `scipy` for noise reduction and statistical validation.
 - Uses `matplotlib` for multi-panel dashboards and trend visualizations.
+
+## Project structure
+
+- `src/climate_anomaly/`: package modules for ingestion, filtering, statistics, modeling, and plotting.
+- `run_analysis.py`: analysis entrypoint for running the full workflow.
+- `requirements.txt`: scientific Python dependencies.
+- `tests/`: lightweight unit tests for core functions.
