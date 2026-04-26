@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "climate-anomaly"
+version = "0.1.0"
+description = "A climate anomaly analysis package for signal filtering, statistical testing, and trend modeling."
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "matplotlib"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["climate_anomaly"]
