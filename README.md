@@ -17,3 +17,11 @@ This project is designed for real-world weather analysis, not simple tutorial da
 - `run_analysis.py`: analysis entrypoint for running the full workflow.
 - `requirements.txt`: scientific Python dependencies.
 - `tests/`: lightweight unit tests for core functions.
+
+## Mathematical context
+
+The analysis uses statistical formulas such as standard deviation:
+
+$$\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$
+
+This makes the methodology clear for recruiters and reviewers.
