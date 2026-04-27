@@ -25,3 +25,17 @@ The analysis uses statistical formulas such as standard deviation:
 $$\sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$
 
 This makes the methodology clear for recruiters and reviewers.
+
+## Environment and setup
+
+Install the project dependencies with:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run the analysis with:
+
+```bash
+python run_analysis.py --data data/global_temperatures.csv --output output
+```
