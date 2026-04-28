@@ -39,3 +39,7 @@ Run the analysis with:
 ```bash
 python run_analysis.py --data data/global_temperatures.csv --output output
 ```
+
+## Why SciPy?
+
+SciPy is used instead of a simple regression library because it provides low-level signal filtering and statistical functions directly. This makes it possible to both smooth noisy climate data and then validate long-term warming trends with the same scientific stack.
