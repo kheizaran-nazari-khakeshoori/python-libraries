@@ -22,3 +22,9 @@ def aggregate_decades(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df['decade'] = (df.index.year // 10) * 10
     return df.groupby('decade')['average_temperature'].mean().to_frame('decade_mean')
+
+def load_parquet(path: str) -> pd.DataFrame:
+    """Load climate data from Parquet format with proper datetime conversion."""
+    df = pd.read_parquet(path)
+    df = df.pipe(lambda frame: frame.assign(date=pd.to_datetime(frame['date'], errors='coerce')))
+    return df.set_index('date')
