@@ -41,3 +41,6 @@ poetry.lock
 
 # Note: dependencies like numpy, matplotlib, scipy, pandas are installed via requirements or env,
 # so their source files should not be committed from your local environment.
+output/
+/tests/temp_climate.csv
+.idea/
