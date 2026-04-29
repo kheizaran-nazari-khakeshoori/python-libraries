@@ -1,9 +1,10 @@
 """Entry point for climate anomaly analysis workflows."""
 
 import argparse
+import os
 from src.climate_anomaly.data_processing import load_dataset, clean_dataset
 from src.climate_anomaly.signal_processing import remove_seasonal_noise
-from src.climate_anomaly.visualization import plot_raw_data, plot_smoothed_trend, plot_anomaly_distribution
+from src.climate_anomaly.visualization import plot_raw_data, plot_smoothed_trend, plot_anomaly_distribution, plot_comparison_dashboard
 
 
 def parse_args():
@@ -15,12 +16,14 @@ def parse_args():
 
 def main():
     args = parse_args()
+    os.makedirs(args.output, exist_ok=True)
     df = load_dataset(args.data)
     df = clean_dataset(df)
     df = remove_seasonal_noise(df)
     plot_raw_data(df).savefig(f'{args.output}/raw_data.png')
     plot_smoothed_trend(df).savefig(f'{args.output}/smoothed_trend.png')
     plot_anomaly_distribution(df).savefig(f'{args.output}/anomaly_distribution.png')
+    plot_comparison_dashboard(df).savefig(f'{args.output}/comparison_dashboard.png')
 
 
 if __name__ == '__main__':
